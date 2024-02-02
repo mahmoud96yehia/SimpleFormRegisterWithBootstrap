@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Enable/Disable</title>
+    <link href="../wwwroot/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <form id="form" class="container my-5   border border-primary row-gap-xxl-3 p-3 col-3      ">
+        <h3 class="container">Register Form</h3>
+        <div class="">
+            <label for="username" class="col-sm-2 col-form-label">Username: </label>
+            <input type="text" id="username" class="form-control" placeholder="Enter username" />
+        </div>
+        <br />
+        <div class=" ">
+            <label for="email" class="col-sm-2 col-form-label">Email: </label>
+            <input type="text" id="email" class="form-control" placeholder="Enter Email" />
+        </div>
+        <br />
+
+        <div class="  ">
+            <label for="pass" class="col-sm-2 col-form-label">Password: </label>
+            <input type="text" id="pass" class="form-control" placeholder="Enter Password" />
+        </div>
+        <br />
+        <div class="form-check my-2">
+            <input class="form-check-input " type="checkbox" id="checkbox">
+            <label class="form-check-label" for="checkbox">
+                I Accept
+            </label>
+        </div>
+
+        <button type="button" class="btn btn-primary mt-3 " id="btn" disabled>Submit</button>
+
+    </form>
+
+    <script src="../wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../wwwroot/lib/jquery/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+
+            $('#checkbox').on('change', function () {
+                $('#btn').prop("disabled", !this.checked);
+            });
+
+
+        });
+        //or
+
+
+        //$(function () {
+        //    $("#form #checkbox").on("click", function () {
+        //        if ($("#form #checkbox").is(":checked")) {
+        //            $("#form #btn").prop("disabled", false);
+        //        }
+        //        else {
+        //            $("#form #btn").prop("disabled", true);
+
+        //        }
+
+        //    }
+        //    ); 
+             
+        //});
+    </script>
+</body>
+</html>
